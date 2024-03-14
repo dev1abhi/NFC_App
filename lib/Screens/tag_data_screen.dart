@@ -62,9 +62,7 @@ class _TagDataScreenState extends State<TagDataScreen> {
 
 
   String convertToSerialNumber(List<int> identifier) {
-    // Convert each integer to a hexadecimal string and pad with leading zeros if necessary
     List<String> hexStrings = identifier.map((int value) => value.toRadixString(16).padLeft(2, '0')).toList();
-    // Join the hexadecimal strings with a separator (e.g., ':')
     String serialNumber = hexStrings.join(':');
     return serialNumber;
   }
